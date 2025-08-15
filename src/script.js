@@ -1,23 +1,30 @@
-// Animasi angka
-function animateValue(id, start, end, duration) {
-  let obj = document.getElementById(id);
-  let range = end - start;
-  let startTime = null;
+// Animasikan angka di data desa
+document.addEventListener('DOMContentLoaded', () => {
+  const data = {
+    populasi: 3500,
+    luas: 450,
+    rt: 12,
+  };
 
-  function step(timestamp) {
-    if (!startTime) startTime = timestamp;
-    let progress = Math.min((timestamp - startTime) / duration, 1);
-    obj.textContent = Math.floor(progress * range + start);
-    if (progress < 1) {
-      requestAnimationFrame(step);
-    }
-  }
-  requestAnimationFrame(step);
-}
+  Object.keys(data).forEach((id) => {
+    let target = data[id];
+    let el = document.getElementById(id);
+    let count = 0;
+    let step = target / 100;
 
-// Jalankan animasi saat halaman load
-window.onload = function () {
-  animateValue('populasi', 0, 3500, 2000);
-  animateValue('luas', 0, 450, 2000);
-  animateValue('rt', 0, 20, 2000);
-};
+    let counter = setInterval(() => {
+      count += step;
+      if (count >= target) {
+        count = target;
+        clearInterval(counter);
+      }
+      el.textContent = Math.floor(count);
+    }, 20);
+  });
+
+  const carousel = document.querySelector('.carousel-container');
+  carousel.addEventListener('wheel', (evt) => {
+    evt.preventDefault();
+    carousel.scrollLeft += evt.deltaY;
+  });
+});

@@ -1,88 +1,205 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f9f9f9;
+:root {
+  --color-light-white: #ffffff;
+  --color-light-green: #b7d8a7;
+  --color-dark-green: #70856d;
+  --color-brown: #c49166;
 }
 
-h1,
-h2,
-h3 {
-  color: #333;
+/* Navbar Container */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 35px;
+  height: 60px; /* tinggi navbar */
+  width: 95%;
+  background-color: #fdf9e1; /* warna lembut */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 10px; /* sedikit lebih melengkung */
+  display: flex; /* supaya nav-container bisa stretch */
+  align-items: center; /* vertical center */
+  padding: 0 20px; /* padding horizontal */
 }
 
-/* Hero Section */
-.hero {
-  position: relative;
-  background: url('https://via.placeholder.com/1600x600/28a745/ffffff?text=Desa+Logandu') no-repeat center/cover;
-  height: 60vh;
+/* Navbar Inner Container */
+.nav-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  justify-content: space-between; /* logo kiri, menu kanan */
+  align-items: center; /* vertical center konten */
 }
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Menu */
+.nav-links {
+  display: flex;
+  gap: 20px; /* Spasi antar menu */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #555;
+}
+
+/*Hero*/
+.hero {
+  background: url('img/fti.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  padding-top: 60px;
+}
+
 .hero .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
 }
+
 .hero-content {
   position: relative;
+  z-index: 2;
   text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow-x: auto;
+  display: flex;
+  padding: 20px 0;
   z-index: 2;
 }
 
-/* Section */
-.section {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-  background: white;
-  margin-top: 20px;
-  border-radius: 10px;
-}
-
-/* Card */
-.card-container {
+.carousel-track {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
 }
+
+.carousel-item {
+  background: #ddd;
+  border-radius: 8px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ukuran sesuai gambar contoh */
+.carousel-item.small {
+  width: 150px;
+  height: 150px;
+}
+
+.carousel-item.medium {
+  width: 180px;
+  height: 180px;
+}
+
+.carousel-item.large {
+  width: 220px;
+  height: 220px;
+}
+
+.hero-desc {
+  max-width: 800px;
+  text-align: center;
+  color: black;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  z-index: 2;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: white;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .card {
   flex: 1;
-  min-width: 250px;
-  background: #f4f4f4;
-  padding: 20px;
+  background: var(--color-light-green);
+  padding: 30px;
   border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Statistik */
+#visi-misi h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .stats {
-  text-align: center;
-}
-.stat-container {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-.stat h3 {
-  font-size: 2em;
-  color: #28a745;
+  justify-content: space-around;
+  text-align: center;
 }
 
-/* Footer */
+.stat h3 {
+  font-size: 2rem;
+  color: var(--color-dark-green);
+}
+
 footer {
-  background: #28a745;
-  color: white;
-  text-align: center;
+  background: var(--color-brown);
+  color: var(--color-light-white);
   padding: 20px;
-  margin-top: 40px;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  background-color: var(--color-light-white);
+  color: var(--color-dark-green);
 }

@@ -4,23 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil Desa Logandu</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
 
     <!-- AOS (animasi scroll) -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="navbar" data-aos="fade-down">
+      <div class="nav-container">
+        <a href="#" class="logo">Desa Logandu</a>
+        <ul class="nav-links">
+          <li><a href="#sejarah">Sejarah</a></li>
+          <li><a href="#visi-misi">Visi & Misi</a></li>
+          <li><a href="#data-desa">Data Desa</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <!-- Hero -->
     <header class="hero" data-aos="fade-down">
       <div class="overlay"></div>
       <div class="hero-content">
-        <h1>Desa Logandu</h1>
-        <p>Kecamatan Karanggayam, Kabupaten Kebumen</p>
+        <h2>Selamat Datang<br />di Website Resmi Desa Logandu</h2>
       </div>
+
+      <!-- Carousel -->
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="carousel-item small"><img src="img/img1.jpg" alt="Gambar 1" /></div>
+          <div class="carousel-item large"><img src="img/img2.jpg" alt="Gambar 2" /></div>
+          <div class="carousel-item medium"><img src="img/img3.jpg" alt="Gambar 3" /></div>
+          <div class="carousel-item large"><img src="img/img4.jpg" alt="Gambar 4" /></div>
+          <div class="carousel-item medium"><img src="img/img5.jpg" alt="Gambar 5" /></div>
+          <div class="carousel-item large"><img src="img/img6.jpg" alt="Gambar 6" /></div>
+          <div class="carousel-item small"><img src="img/img7.jpg" alt="Gambar 7" /></div>
+        </div>
+      </div>
+
+      <p class="hero-desc">Melalui website ini anda dapat menjelajahi segala hal yang terkait dengan Desa Logandu. Mulai dari aspek sejarah, budaya, umkm, dan struktur organisasi yang ada di Desa Logandu</p>
     </header>
 
     <!-- Sejarah Desa -->
-    <section class="section" data-aos="fade-up">
+    <section id="sejarah" class="section" data-aos="fade-up">
       <h2>Sejarah Desa</h2>
       <p>
         Desa Logandu memiliki sejarah panjang yang penuh nilai budaya. Terletak di Kecamatan Karanggayam, desa ini dikenal dengan keramahan warganya dan potensi alam yang melimpah. Sejak dahulu, Desa Logandu menjadi pusat aktivitas
@@ -29,8 +61,7 @@
     </section>
 
     <!-- Visi Misi -->
-    <section class="section" data-aos="fade-up">
-      <h2>Visi & Misi</h2>
+    <section id="visi-misi" class="section" data-aos="fade-up">
       <div class="card-container">
         <div class="card" data-aos="flip-left">
           <h3>Visi</h3>
@@ -47,27 +78,8 @@
       </div>
     </section>
 
-    <!-- Data Desa -->
-    <section class="section stats" data-aos="fade-up">
-      <h2>Data Singkat Desa</h2>
-      <div class="stat-container">
-        <div class="stat">
-          <h3 id="populasi">0</h3>
-          <p>Penduduk</p>
-        </div>
-        <div class="stat">
-          <h3 id="luas">0</h3>
-          <p>Hektar</p>
-        </div>
-        <div class="stat">
-          <h3 id="rt">0</h3>
-          <p>RT</p>
-        </div>
-      </div>
-    </section>
-
     <!-- Kontak -->
-    <footer data-aos="fade-up">
+    <footer id="kontak" data-aos="fade-up">
       <h3>Kontak & Lokasi</h3>
       <p>Alamat: Desa Logandu, Karanggayam, Kebumen</p>
       <p>Email: logandu@example.com</p>
@@ -75,7 +87,6 @@
     </footer>
 
     <script src="script.js"></script>
-
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
