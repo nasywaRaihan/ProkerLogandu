@@ -9,16 +9,19 @@
 .navbar {
   position: fixed;
   top: 20px;
-  left: 35px;
+  left: 35px; /* Posisikan di tengah secara horizontal */
+  /* Geser ke kiri sejauh setengah lebarnya */
   height: 60px; /* tinggi navbar */
   width: 95%;
+  /* Lebar maksimum navbar */
   background-color: #fdf9e1; /* warna lembut */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   border-radius: 10px; /* sedikit lebih melengkung */
   display: flex; /* supaya nav-container bisa stretch */
   align-items: center; /* vertical center */
-  padding: 0 20px; /* padding horizontal */
+  justify-content: space-between; /* 👈 KUNCI UTAMA: Mendorong item ke ujung */
+  padding: 0 25px; /* Padding di kiri dan kanan */
 }
 
 /* Navbar Inner Container */
@@ -29,6 +32,35 @@
   display: flex;
   justify-content: space-between; /* logo kiri, menu kanan */
   align-items: center; /* vertical center konten */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .logo {
+  height: 50px;
+  margin-right: 0px;
+  padding-right: 10px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  display: flex; /* 👈 PENTING: Mengaktifkan Flexbox */
+  align-items: left; /* 👈 PENTING: Membuat item sejajar secara vertikal */
+}
+
+.brand-text .village-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.brand-text .regency-name {
+  font-size: 12px;
+  color: #555;
 }
 
 /* Logo */
@@ -42,21 +74,23 @@
 /* Menu */
 .nav-links {
   display: flex;
-  gap: 20px; /* Spasi antar menu */
+  gap: 10px; /* Spasi antar menu */
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .nav-links a {
-  text-decoration: none;
   color: #333;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 15px;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #555;
+  color: #8b4513; /* Warna coklat saat hover */
 }
 
 /*Hero*/
@@ -203,4 +237,82 @@ body {
   line-height: 1.6;
   background-color: var(--color-light-white);
   color: var(--color-dark-green);
+}
+
+/* Styling untuk seluruh bagian footer */
+.site-footer {
+  background-color: #fdf9e1; /* Warna merah marun */
+  color: black;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Agar responsif di layar kecil */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Styling untuk setiap kolom di dalam footer */
+.footer-section {
+  flex: 1; /* Memberi ruang yang sama untuk setiap kolom */
+  min-width: 220px; /* Lebar minimum sebelum pindah baris */
+  margin: 20px;
+  text-align: left;
+}
+
+/* Styling untuk logo desa */
+.footer-section .logo {
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+/* Styling untuk judul setiap kolom */
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Styling untuk paragraf */
+.footer-section p {
+  margin-top: 5px;
+}
+
+/* Styling untuk link agar tidak ada garis bawah dan warna tetap putih */
+.footer-section a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Efek saat kursor mouse di atas link */
+.footer-section a:hover {
+  color: #70856d; /* Warna gold saat hover */
+}
+
+/* Styling untuk item di "Hubungi Kami" agar ikon sejajar dengan teks */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-item img {
+  height: 16px;
+  margin-right: 10px;
+}
+
+/* Styling khusus untuk ikon media sosial */
+.social-icons a {
+  margin-right: 12px;
+}
+
+.social-icons img {
+  height: 24px;
+  transition: opacity 0.3s;
+}
+
+.social-icons img:hover {
+  opacity: 0.8;
 }
