@@ -105,7 +105,7 @@ body {
 
 /* ========== HERO ========== */
 .hero {
-  background: url('img/fti.jpg') center/cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, /* Mulai dengan overlay gelap */ rgba(0, 0, 0, 0.4) 50%, /* Tetap gelap sampai setengah */ white 50%, white 100%), url('img/sawah.png') center top / cover no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -115,12 +115,6 @@ body {
   color: white;
   text-align: center;
   padding: 0 20px;
-}
-
-.hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
 }
 
 .hero-content {
@@ -227,6 +221,7 @@ body {
 
 #visi-misi .card ul {
   text-align: left;
+  margin-left: 20px;
 }
 
 /* Deskripsi Desa Section */
@@ -428,21 +423,19 @@ body {
 
 .map-placeholder {
   width: 100%;
-  height: 400px;
+  height: 350px;
   background-color: var(--color-dark-green);
   border: 1px solid #ddd;
   border-radius: 8px;
 }
 
-/* Peta Desa */
-.peta-section {
-  background-color: var(--color-light-white);
-}
-
 .map-container {
+  width: 100%;
+  max-width: 600px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Mengubah shadow */
+  margin: 0 auto; /* Menengahkan elemen */
 }
 
 /* Footer */
