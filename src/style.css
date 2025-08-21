@@ -429,9 +429,20 @@ body {
 .map-placeholder {
   width: 100%;
   height: 400px;
-  background-color: #f0f0f0;
+  background-color: var(--color-dark-green);
   border: 1px solid #ddd;
   border-radius: 8px;
+}
+
+/* Peta Desa */
+.peta-section {
+  background-color: var(--color-light-white);
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
