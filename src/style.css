@@ -188,7 +188,7 @@ body {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
-  background-color: var(--color-light-white);
+  background-color: white; /* Ini akan ditimpa oleh `#visi-misi` */
   text-align: center;
 }
 
@@ -201,14 +201,22 @@ body {
 .card-container {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
   justify-content: center;
+}
+
+.section#visi-misi {
+  background-color: var(--color-light-green); /* Warna latar belakang */
+  border-radius: 8px; /* Membuat sudut melengkung, sesuaikan nilainya */
+  max-width: 95%; /* Atur lebar maksimum wadah, 90% atau sesuaikan */
+  margin: 20px auto; /* Memberi jarak di atas/bawah dan menengahkan */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Memberi bayangan agar terlihat menonjol */
+  text-align: center;
 }
 
 .card {
   flex: 1;
   min-width: 250px;
-  background: var(--color-light-green);
+  background: var(--color-light-yellow);
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -226,8 +234,8 @@ body {
 
 /* Deskripsi Desa Section */
 .deskripsi-section {
-  background-color: var(--color-light-yellow);
-  padding: 60px 20px;
+  background-color: var(--color-light-white);
+  padding: 10px 20px;
   max-width: 1000px;
   margin: auto;
 }
@@ -235,8 +243,8 @@ body {
 .deskripsi-card {
   display: flex;
   align-items: center;
-  gap: 30px;
-  background-color: var(--color-light-green);
+  gap: 50px;
+  background-color: var(--color-brown);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -245,6 +253,7 @@ body {
 .deskripsi-text {
   flex: 2;
   text-align: left;
+  color: var(--color-light-white);
 }
 
 .deskripsi-text h2 {
@@ -257,7 +266,7 @@ body {
 }
 
 .selengkapnya {
-  color: var(--color-dark-green);
+  color: var(--color-light-white);
   font-weight: bold;
   text-decoration: none;
 }
@@ -273,7 +282,12 @@ body {
 
 /* Sejarah & Budaya Section */
 .sejarah-budaya-section {
-  background-color: var(--color-light-yellow);
+  background-color: var(--color-light-yellow); /* Warna latar belakang */
+  border-radius: 8px; /* Membuat sudut melengkung, sesuaikan nilainya */
+  max-width: 95%; /* Atur lebar maksimum wadah, 90% atau sesuaikan */
+  margin: 20px auto; /* Memberi jarak di atas/bawah dan menengahkan */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Memberi bayangan agar terlihat menonjol */
+  text-align: center;
 }
 
 .sejarah-budaya-container {
@@ -305,7 +319,7 @@ body {
 .sejarah-card img,
 .budaya-card img {
   width: 100%;
-  height: auto;
+  height: 80px;
   border-radius: 8px;
   margin-bottom: 15px;
 }
@@ -364,7 +378,12 @@ body {
 
 /* UMKM Section */
 .umkm-section {
-  background-color: var(--color-light-green);
+  background-color: var(--color-light-green); /* Warna latar belakang */
+  border-radius: 8px; /* Membuat sudut melengkung, sesuaikan nilainya */
+  max-width: 95%; /* Atur lebar maksimum wadah, 90% atau sesuaikan */
+  margin: 20px auto; /* Memberi jarak di atas/bawah dan menengahkan */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Memberi bayangan agar terlihat menonjol */
+  text-align: center;
 }
 
 .umkm-container {
