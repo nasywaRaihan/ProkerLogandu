@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -105,7 +105,7 @@ body {
 
 /* ========== HERO ========== */
 .hero {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, /* Mulai dengan overlay gelap */ rgba(0, 0, 0, 0.4) 50%, /* Tetap gelap sampai setengah */ white 50%, white 100%), url('img/sawah.png') center top / cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, /* Mulai dengan overlay gelap */ rgba(0, 0, 0, 0.4) 50%, /* Tetap gelap sampai setengah */ white 50%, white 100%), url("img/sawah.png") center top / cover no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -185,7 +185,7 @@ body {
 
 /* ========== SECTION ========== */
 .section {
-  padding: 60px 20px;
+  padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
   background-color: white; /* Ini akan ditimpa oleh `#visi-misi` */
@@ -531,7 +531,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #333;
 }
 
@@ -554,7 +554,7 @@ body {
 
 .chart-placeholder {
   width: 100%;
-  height: 400px;
+  height: 750px;
   background-color: #f9f9f9;
   border: 1px dashed #ccc;
   border-radius: 8px;
@@ -695,4 +695,35 @@ body {
   .staff-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* 1. CSS untuk Wadah (Mendorong Tombol ke Kanan) */
+.wadah-tombol {
+  display: flex;
+  justify-content: flex-end; /* Ini kuncinya! Mendorong item ke ujung kanan */
+  padding: 20px; /* Memberi sedikit jarak dari tepi layar */
+}
+
+/* 2. CSS untuk Tampilan Tombol */
+.tombol-ikon {
+  display: flex; /* Membuat ikon dan tulisan sejajar */
+  align-items: center; /* Menengahkan ikon dan tulisan secara vertikal */
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #c49166; /* Warna biru, bisa diganti */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Efek hover halus */
+}
+
+/* 3. CSS untuk Memberi Jarak antara Ikon dan Tulisan */
+.tombol-ikon i {
+  margin-right: 8px; /* Jarak antara ikon dan tulisan */
+}
+
+/* 4. CSS untuk Efek saat Kursor di atas Tombol (Hover) */
+.tombol-ikon:hover {
+  background-color: #70856d; /* Warna biru menjadi lebih gelap */
 }
