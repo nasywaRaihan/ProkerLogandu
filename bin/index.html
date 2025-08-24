@@ -5,73 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil Desa Logandu</title>
 
-    <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- AOS (animasi scroll) -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   </head>
   <body>
-    <!-- Navbar -->
     <div id="header-placeholder"></div>
 
-    <!-- Hero -->
     <header class="hero" data-aos="fade-down">
       <div class="overlay"></div>
       <div class="hero-content">
         <h2>Selamat Datang<br />di Website Resmi Desa Logandu</h2>
       </div>
 
-      <!-- Carousel -->
-      <div class="carousel-container">
+      <div class="carousel-container" data-aos="zoom-in-up">
         <div class="carousel-track">
-          <div class="carousel-item small"><img src="img/img1.jpg" alt="Gambar 1" /></div>
-          <div class="carousel-item large"><img src="img/img2.jpg" alt="Gambar 2" /></div>
-          <div class="carousel-item small"><img src="img/img3.jpg" alt="Gambar 3" /></div>
-          <div class="carousel-item large"><img src="img/img4.jpg" alt="Gambar 4" /></div>
-          <div class="carousel-item small"><img src="img/img5.jpg" alt="Gambar 5" /></div>
+          <div class="carousel-item small"><img src="img/1.jpg" alt="Gambar 1" /></div>
+          <div class="carousel-item large"><img src="img/tembakau.jpg" alt="Gambar 2" /></div>
+          <div class="carousel-item small"><img src="img/1.jpg" alt="Gambar 3" /></div>
+          <div class="carousel-item large"><img src="img/tembakau.jpg" alt="Gambar 4" /></div>
+          <div class="carousel-item small"><img src="img/1.jpg" alt="Gambar 5" /></div>
         </div>
       </div>
 
-      <p class="hero-desc">Melalui website ini anda dapat menjelajahi segala hal menarik terkait Desa Logandu. Mulai dari aspek sejarah, budaya, umkm, dan struktur organisasi yang ada di Desa Logandu.</p>
+      <p class="hero-desc" data-aos="fade-up">Melalui website ini anda dapat menjelajahi segala hal menarik terkait Desa Logandu. Mulai dari aspek sejarah, budaya, umkm, dan struktur organisasi yang ada di Desa Logandu.</p>
     </header>
 
-    <!-- Sejarah Desa -->
-    <section id="sejarah" class="section" data-aos="fade-up">
-      <h2>Sejarah Desa</h2>
-      <p>
-        Desa Logandu memiliki sejarah panjang yang penuh nilai budaya. Terletak di Kecamatan Karanggayam, desa ini dikenal dengan keramahan warganya dan potensi alam yang melimpah. Sejak dahulu, Desa Logandu menjadi pusat aktivitas
-        pertanian dan kegiatan sosial masyarakat.
-      </p>
-    </section>
-
-    <!-- Visi Misi -->
     <section id="visi-misi" class="section" data-aos="fade-up">
+      <h2>Visi dan Misi</h2>
       <div class="card-container">
         <div class="card" data-aos="flip-left">
           <h3>Visi</h3>
-          <p>Mewujudkan desa yang maju, mandiri, dan sejahtera dengan tetap menjaga kearifan lokal.</p>
+          <p>Mewujudkan masyarakat yang unggul, aman, tentram, jujur, demokratis, dan sejahtera.</p>
         </div>
         <div class="card" data-aos="flip-right">
           <h3>Misi</h3>
           <ul>
-            <li>Meningkatkan kualitas pendidikan dan kesehatan.</li>
-            <li>Mendorong pembangunan infrastruktur desa.</li>
-            <li>Melestarikan lingkungan dan budaya lokal.</li>
+            <li>Meningkatkan SDM aparatur baik pemerintahan maupun masyarakat desa.</li>
+            <li>Menciptakan dan meningkatkan produk unggulan desa.</li>
+            <li>Meningkatkan kerukunan beragama serta mengembangakan adat istiadat, budaya, dan nilai-nilai luhur yang merupakan potensi asli desa.</li>
+            <li>Meningkatkan pelayanan masyarakat yang berbasis anak dan gender.</li>
+            <li>Mengembangkan produk asli desa menjadi lebih bernilai.</li>
+            <li>Meningkatkan layanan pembangunan infrastruktur pertanian.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <section id="deskripsi-desa" class="section deskripsi-section" data-aos="fade-up">
+      <div class="deskripsi-card">
+        <div class="deskripsi-text">
+          <h2>Deskripsi Desa</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra libero et libero consequat dictum. Donec lobortis massa sit amet metus iaculis, id vestibulum arcu commodo. Vestibulum turpis eros, aliquam non fermentum
+            eu, fringilla sit amet nisl. Pellentesque urna nisi, cursus vel finibus eu, posuere et metus.
+          </p>
+          <a href="#" class="selengkapnya">Selengkapnya...</a>
+        </div>
+        <div class="deskripsi-img" data-aos="fade-left"><img src="img\fti.jpg" alt="Gambar Sawah" /></div>
+      </div>
+    </section>
+
+    <section id="sejarah-budaya" class="section sejarah-budaya-section" data-aos="fade-up">
+      <h2>Sejarah dan Budaya</h2>
+      <div class="sejarah-budaya-container">
+        <div class="sejarah-card" data-aos="fade-right">
+          <h3>SEJARAH</h3>
+          <img src="img/1.jpg" alt="Sejarah" />
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. enim in eros elementum tristique. Duis cursus, mi quis .</p>
+          <a href="#" class="btn-selengkapnya">Baca Selengkapnya</a>
+        </div>
+        <div class="budaya-card" data-aos="fade-left">
+          <h3>BUDAYA</h3>
+          <img src="img/1.jpg" alt="Budaya" />
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. enim in eros elementum tristique. Duis cursus, mi quis .</p>
+          <a href="#" class="btn-selengkapnya">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="struktur" class="section" data-aos="fade-up">
+      <h2>Struktur Kepengurusan</h2>
+      <div class="head-official-container" data-aos="zoom-in">
+        <div class="official-card">
+          <div>
+            <img class="profile-picture" src="img\fti.jpg" alt="gambar" />
+          </div>
+          <div class="name">Sarian</div>
+          <div class="title">Kepala Desa</div>
+        </div>
+        <div class="welcome-speech">
+          <p>
+            Assalamualaikum Wr. Wb ...................... Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tenetur maxime nostrum doloribus illo, consequatur exercitationem culpa sint optio. Eos possimus nesciunt hic
+            voluptas dolore quod perferendis nam nisi error?
+          </p>
+        </div>
+      </div>
+      <div class="wadah-tombol" data-aos="fade-up">
+        <a href="struktur.html" class="tombol-ikon" style="text-decoration: none;">
+          <i class="fa-solid fa-arrow-right"></i>
+          <span>Lihat Selengkapnya</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="umkm" class="section umkm-section" data-aos="fade-up">
+      <h2>UMKM Desa Logandu</h2>
+      <div class="umkm-container">
+        <div class="umkm-card" data-aos="zoom-in">
+          <img src="img/tembakau.jpg" alt="UMKM 1" />
+          <div class="umkm-content">
+            <h4>UMKM 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="umkm-link">Baca Selengkapnya</a>
+          </div>
+        </div>
+        <div class="umkm-card" data-aos="zoom-in">
+          <img src="img/tembakau.jpg" alt="UMKM 2" />
+          <div class="umkm-content">
+            <h4>UMKM 2</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="umkm-link">Baca Selengkapnya</a>
+          </div>
+        </div>
+        <div class="umkm-card" data-aos="zoom-in">
+          <img src="img/tembakau.jpg" alt="UMKM 3" />
+          <div class="umkm-content">
+            <h4>UMKM 3</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="umkm-link">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="peta-desa" class="section" data-aos="fade-up">
+      <h2>Peta Desa Logandu</h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15285.000006154442!2d109.62917519528062!3d-7.558809929279479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7ab3bf48d3eb23%3A0x5027a76e3553830!2sLogandu%2C%20Karanggayam%2C%20Kebumen%20Regency%2C%20Central%20Java!5e1!3m2!1sen!2sid!4v1755783386892!5m2!1sen!2sid"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
     <div id="footer-placeholder"></div>
 
     <script src="script.js"></script>
-    <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({ duration: 1000 });
