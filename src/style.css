@@ -82,7 +82,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  color: #333;
+  color: black;
 }
 
 .nav-links {
@@ -298,7 +298,6 @@ body {
   gap: 40px;
 }
 
-.sejarah-card,
 .budaya-card {
   display: flex;
   flex-direction: column;
@@ -626,10 +625,13 @@ body {
   color: #777;
 }
 
-/* HALAMAN BUDAYA*/
+/* =============================================== */
+/* HALAMAN BUDAYA                     */
+/* =============================================== */
+
 /* Hero Section Budaya */
 .budaya-hero {
-  background: url('img/budaya.jpg') center/cover no-repeat; /* Ganti dengan gambar budaya Anda */
+  background: url('img/budaya.jpg') center/cover no-repeat;
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -639,76 +641,198 @@ body {
   color: white;
   text-align: center;
   padding: 0 20px;
+  margin-bottom: 40px;
 }
 
 .budaya-hero .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .budaya-hero h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   z-index: 2;
   position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Bagian Konten*/
+/* Bagian Konten Budaya */
 .budaya-section {
-  background-color: var(--color-light-yellow); /* Warna latar belakang penuh */
-  padding: 60px 0;
+  padding: 40px 20px;
+  background-color: white; /* Latar belakang section juga menjadi putih */
 }
 
-/* Kartu Konten Budaya */
-.content-card {
-  max-width: 1000px;
-  margin: 40px auto;
-  background-color: white;
-  padding: 40px;
-  border-radius: 10px;
+.budaya-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Wrapper Latar Belakang Kuning */
+.card-block-wrapper {
+  background-color: var(--color-light-yellow); /* Memberi latar belakang kuning */
+  padding: 20px; /* Memberi jarak antara latar belakang kuning dan kartu putih */
+  border-radius: 6px;
+  margin: 0 auto 30px auto; /* Memberi margin bawah untuk setiap blok dan membuatnya di tengah */
+  max-width: 1000px; /* Sesuaikan lebar maksimum */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Kartu Konten Putih */
+.content-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Tambahkan atau pastikan properti ini ada */
+}
+
 .content-card h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.75rem;
+  margin-bottom: 15px;
   text-align: center;
+  color: var(--color-dark-green);
 }
 
 .content-card p {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: center;
+  line-height: 1.6;
 }
 
 .content-card .selengkapnya {
-  display: block;
-  text-align: center;
-  margin-bottom: 30px;
+  display: inline-block;
   color: var(--color-dark-green);
   font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
 }
 
-/* Grid Gambar Budaya */
+/* Grid Gambar */
 .image-grid {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
+  margin-top: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
 }
 
 .image-item {
-  width: 150px;
-  height: 150px;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
+}
+
+.image-item.small {
+  width: 120px;
+  height: 100px;
+}
+
+.image-item.large {
+  width: 160px;
+  height: 140px;
 }
 
 .image-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+/* =============================================== */
+/* HALAMAN SEJARAH */
+/* =============================================== */
+
+/* Hero Section Sejarah */
+.sejarah-hero {
+  background: url('img/sawah.png') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.sejarah-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.sejarah-hero h1 {
+  font-size: 3rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* Bagian Konten Sejarah */
+.sejarah-section {
+  background-color: var(--color-dark-green); /* Warna hijau gelap */
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Kartu Konten Sejarah */
+.sejarah-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--color-light-green); /* Warna hijau muda */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Mengubah urutan layout untuk kartu kedua dan seterusnya */
+.sejarah-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.sejarah-card .card-text {
+  flex: 1;
+}
+
+.sejarah-card .card-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left;
+  color: black;
+}
+
+.sejarah-card .card-text p {
+  margin-bottom: 20px;
+  text-align: left;
+  color: black;
+}
+
+.sejarah-card .read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--color-dark-green);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Placeholder Gambar */
+.sejarah-card .card-image {
+  flex: 1;
+}
+
+.sejarah-card .placeholder-image {
+  width: 100%;
+  height: 300px; /* Atur tinggi sesuai kebutuhan */
+  background-color: #dcdcdc; /* Warna abu-abu placeholder */
+  border-radius: 8px;
 }
 
 /* ========== MEDIA QUERIES (RESPONSIVITAS) ========== */
@@ -806,6 +930,27 @@ body {
   }
   .contact-item {
     justify-content: center;
+  }
+
+  .sejarah-hero h1 {
+    font-size: 2rem;
+  }
+
+  .sejarah-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sejarah-card.reverse {
+    flex-direction: column; /* Mengubah kembali agar tumpuk ke bawah */
+  }
+
+  .sejarah-card .card-text {
+    text-align: center;
+  }
+
+  .sejarah-card .card-text h2 {
+    text-align: center;
   }
 }
 
