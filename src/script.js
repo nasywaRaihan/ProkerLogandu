@@ -1,5 +1,5 @@
 // Menunggu seluruh struktur HTML siap sebelum menjalankan JavaScript
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // ===============================================
   // FUNGSI UNTUK MEMUAT KOMPONEN (HEADER & FOOTER)
   // ===============================================
@@ -10,19 +10,37 @@ document.addEventListener('DOMContentLoaded', () => {
         .then((response) => response.text())
         .then((data) => {
           element.innerHTML = data;
+
+          // Setelah header dimuat, baru kita cari tombol toggle-nya
+          if (id === "header-placeholder") {
+            setupMenuToggle();
+          }
         });
     }
   };
 
+  // ===============================================
+  // FUNGSI UNTUK TOGGLE NAVBAR MOBILE
+  // ===============================================
+  const setupMenuToggle = () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    }
+  };
+
   // Selalu panggil fungsi untuk memuat header dan footer di setiap halaman
-  loadComponent('header-placeholder', 'header.html');
-  loadComponent('footer-placeholder', 'footer.html');
+  loadComponent("header-placeholder", "header.html");
+  loadComponent("footer-placeholder", "footer.html");
 
   // ===============================================
   // BAGIAN 1: Kode Animasi Angka (HANYA JIKA ELEMENNYA ADA)
   // ===============================================
-  // Kita periksa dulu apakah salah satu elemen data ada, misalnya 'populasi'
-  if (document.getElementById('populasi')) {
+  if (document.getElementById("populasi")) {
     const data = {
       populasi: 3500,
       luas: 450,
@@ -50,39 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===============================================
   // BAGIAN 2: Kode Carousel (HANYA JIKA ELEMENNYA ADA)
   // ===============================================
-  const carousel = document.querySelector('.carousel-container');
+  const carousel = document.querySelector(".carousel-container");
   if (carousel) {
-    carousel.addEventListener('wheel', (evt) => {
+    carousel.addEventListener("wheel", (evt) => {
       evt.preventDefault();
       carousel.scrollLeft += evt.deltaY;
     });
   }
 });
-
-// ===============================================
-// BAGIAN 3: Kode Toggle Menu (HANYA JIKA ELEMENNYA ADA)
-// ===============================================
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
-
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-}
-
-// Load header dan footer dinamis
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("header-placeholder").innerHTML = data;
-    });
-
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("footer-placeholder").innerHTML = data;
-    });
-});
-
