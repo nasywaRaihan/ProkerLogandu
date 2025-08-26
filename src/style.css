@@ -1109,7 +1109,7 @@ body {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Di bawah navbar */
+    top: 60px;
     width: 50%;
     left: 50%;
     background-color: var(--color-light-yellow);
@@ -1138,7 +1138,6 @@ body {
     width: 30px;
     height: 25px;
     cursor: pointer;
-    display: flex;
   }
 
   .menu-toggle .bar {
@@ -1148,7 +1147,23 @@ body {
     transition: all 0.3s ease-in-out;
   }
 
-  /* Carousel */
+  /* Carousel dan Hero Section */
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-desc {
+    font-size: 0.9rem;
+  }
+
+  .carousel-container {
+    width: 100%;
+    margin: 20px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .carousel-item.small {
     width: 60vw;
     height: 60vw;
@@ -1161,7 +1176,8 @@ body {
   /* Sections */
   .card-container,
   .deskripsi-card,
-  .sejarah-budaya-container {
+  .sejarah-budaya-container,
+  .head-official-container {
     flex-direction: column;
     text-align: center;
   }
@@ -1179,13 +1195,10 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .head-official-container {
-    flex-direction: column;
-  }
-
   .footer-section {
     text-align: center;
   }
+
   .contact-item {
     justify-content: center;
   }
@@ -1200,7 +1213,7 @@ body {
   }
 
   .sejarah-card.reverse {
-    flex-direction: column; /* Mengubah kembali agar tumpuk ke bawah */
+    flex-direction: column;
   }
 
   .sejarah-card .card-text {
@@ -1210,30 +1223,149 @@ body {
   .sejarah-card .card-text h2 {
     text-align: center;
   }
-}
 
-/* Tablet (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .staff-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Responsif umkm */
-@media (max-width: 768px) {
+  /* UMKM (Digabungkan) */
   .video-grid {
     flex-direction: column;
     align-items: center;
   }
 
   .product-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Responsif Umum untuk Profil, Galeri, Video, dan Peta */
+  .main-content-profile {
+    padding: 20px;
+  }
+
+  .profil {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .profil-text {
+    order: 2;
+    text-align: justify;
+  }
+
+  .profil-img {
+    order: 1;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+
+  .profil-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .card {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .gallery {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .slider-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 15px;
+  }
+
+  .slider {
+    display: inline-flex;
+    gap: 20px;
+  }
+
+  .slider img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .video-frame {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .video-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .map-frame {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .map-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
   }
 }
 
 @media (max-width: 480px) {
   .product-grid {
-    grid-template-columns: 1fr; /* 1 kolom di mobile */
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Susunan Profil: Teks dan Gambar Berdampingan */
+  .profil {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .profil-text {
+    flex: 1;
+    order: 1;
+    padding-right: 30px;
+  }
+
+  .profil-img {
+    flex: 1;
+    order: 2;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .staff-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
