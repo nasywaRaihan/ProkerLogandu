@@ -337,6 +337,11 @@ body {
   margin-bottom: 15px;
 }
 
+.tokoh {
+  text-align: center;
+  font-weight: reguler;
+}
+
 .btn-selengkapnya {
   display: inline-block;
   padding: 10px 20px;
