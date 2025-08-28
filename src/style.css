@@ -70,11 +70,13 @@ body {
   font-size: 19px;
   font-weight: bold;
   color: #333;
+  margin-left: 10px;
 }
 
 .brand-text .regency-name {
   font-size: 16px;
   color: #555;
+  margin-left: 10px;
 }
 
 .menu-toggle {
@@ -178,11 +180,11 @@ body {
 .hero-desc {
   max-width: 800px;
   text-align: center;
-  color: white;
+  color: black;
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;
   border-radius: 8px;
-  margin-top: 20px;
+  margin-top: 5px;
   z-index: 2;
 }
 
@@ -345,16 +347,15 @@ body {
 }
 
 .detail-text {
-  list-style-type: disc;     /* tetap pakai titik bulat */
+  list-style-type: disc; /* tetap pakai titik bulat */
   list-style-position: inside; /* bullet sejajar sama teks */
-  padding-left: 20px;          /* atur jarak masuk dari paragraf biasa */
+  padding-left: 20px; /* atur jarak masuk dari paragraf biasa */
 }
 
 .detail-text li {
-  margin-bottom: 8px;          /* jarak antar poin */
-  text-align: justify;         /* biar rapi kiri-kanan */
+  margin-bottom: 8px; /* jarak antar poin */
+  text-align: justify; /* biar rapi kiri-kanan */
 }
-
 
 .btn-selengkapnya {
   display: inline-block;
@@ -1260,48 +1261,48 @@ footer div {
   }
 
   .carousel-container {
-  width: 100%;
-  margin: 20px auto;
-  overflow-x: auto;
-  overflow-y: hidden;          /* supaya gak ada scroll atas-bawah */
-  display: flex;
-  gap: 15px;                   /* jarak antar gambar */
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  padding: 10px;
-}
+    width: 100%;
+    margin: 20px auto;
+    overflow-x: auto;
+    overflow-y: hidden; /* supaya gak ada scroll atas-bawah */
+    display: flex;
+    gap: 15px; /* jarak antar gambar */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding: 10px;
+  }
 
-.carousel-track {
-  display: flex;
-}
+  .carousel-track {
+    display: flex;
+  }
 
-.carousel-item {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  border-radius: 10px;
-  overflow: hidden;            /* biar gambar gak keluar dari kotak */
-  background: #fff;
-}
+  .carousel-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 10px;
+    overflow: hidden; /* biar gambar gak keluar dari kotak */
+    background: #fff;
+  }
 
-/* Ukuran untuk gambar kecil */
-.carousel-item.small {
-  width: 140px;
-  height: 140px;
-}
+  /* Ukuran untuk gambar kecil */
+  .carousel-item.small {
+    width: 140px;
+    height: 140px;
+  }
 
-/* Ukuran untuk gambar besar */
-.carousel-item.large {
-  width: 200px;
-  height: 180px;
-}
+  /* Ukuran untuk gambar besar */
+  .carousel-item.large {
+    width: 200px;
+    height: 180px;
+  }
 
-/* Gambar isi penuh kotak */
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;           /* isi penuh tanpa gepeng */
-  display: block;
-}
+  /* Gambar isi penuh kotak */
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* isi penuh tanpa gepeng */
+    display: block;
+  }
 
   /* Sections */
   .card-container,
@@ -1603,7 +1604,6 @@ footer div {
   scroll-snap-type: x mandatory;
   padding-bottom: 15px;
 }
-
 
 .slider {
   display: inline-flex;
