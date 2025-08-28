@@ -55,7 +55,8 @@ body {
 }
 
 .navbar-brand .logo {
-  height: 50px;
+  height: 40px;
+  width: 28px;
   margin-right: 10px;
 }
 
@@ -106,7 +107,7 @@ body {
 
 /* ========== HERO ========== */
 .hero {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, /* Mulai dengan overlay gelap */ rgba(0, 0, 0, 0.4) 50%, /* Tetap gelap sampai setengah */ white 50%, white 100%), url('img/sawah.png') center top / cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 50%, white 50%, white 100%), url('img/sawah.png') center top / cover no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -126,6 +127,7 @@ body {
 .hero-content h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: white;
 }
 
 /* Carousel */
@@ -150,7 +152,6 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Ukuran sesuai gambar contoh */
 .carousel-item.small {
   width: 250px;
   height: 250px;
@@ -176,8 +177,8 @@ body {
 .hero-desc {
   max-width: 800px;
   text-align: center;
-  color: black;
-  background: white;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
   padding: 20px;
   border-radius: 8px;
   margin-top: 20px;
@@ -189,7 +190,7 @@ body {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
-  background-color: white; /* Ini akan ditimpa oleh `#visi-misi` */
+  background-color: white;
   text-align: center;
 }
 
@@ -206,11 +207,11 @@ body {
 }
 
 .section#visi-misi {
-  background-color: var(--color-light-green); /* Warna latar belakang */
-  border-radius: 8px; /* Membuat sudut melengkung, sesuaikan nilainya */
-  max-width: 95%; /* Atur lebar maksimum wadah, 90% atau sesuaikan */
-  margin: 20px auto; /* Memberi jarak di atas/bawah dan menengahkan */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Memberi bayangan agar terlihat menonjol */
+  background-color: var(--color-light-green);
+  border-radius: 8px;
+  max-width: 95%;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -287,11 +288,11 @@ body {
 
 /* Sejarah & Budaya Section */
 .sejarah-budaya-section {
-  background-color: var(--color-light-yellow); /* Warna latar belakang */
-  border-radius: 8px; /* Membuat sudut melengkung, sesuaikan nilainya */
-  max-width: 95%; /* Atur lebar maksimum wadah, 90% atau sesuaikan */
-  margin: 20px auto; /* Memberi jarak di atas/bawah dan menengahkan */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Memberi bayangan agar terlihat menonjol */
+  background-color: var(--color-light-yellow);
+  border-radius: 8px;
+  max-width: 95%;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -390,11 +391,11 @@ body {
 
 /* UMKM Section */
 .umkm-section {
-  background-color: var(--color-light-green); /* Warna latar belakang */
-  border-radius: 8px; /* Membuat sudut melengkung, sesuaikan nilainya */
-  max-width: 95%; /* Atur lebar maksimum wadah, 90% atau sesuaikan */
-  margin: 20px auto; /* Memberi jarak di atas/bawah dan menengahkan */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Memberi bayangan agar terlihat menonjol */
+  background-color: var(--color-light-green);
+  border-radius: 8px;
+  max-width: 95%;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -451,6 +452,7 @@ body {
 .umkm-link:hover {
   color: var(--color-brown);
 }
+
 /* Peta Desa */
 .peta-section {
   background-color: var(--color-light-white);
@@ -469,8 +471,8 @@ body {
   max-width: 600px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Mengubah shadow */
-  margin: 0 auto; /* Menengahkan elemen */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 }
 
 /* Footer */
@@ -494,10 +496,10 @@ body {
 }
 
 .site-footer .footer-section .logo {
-  display: block; /* Membuat logo menjadi blok elemen */
-  max-width: 100px; /* Sesuaikan ukuran logo sesuai keinginan Anda */
+  display: block;
+  max-width: 100px;
   height: auto;
-  margin: 0 auto 15px auto; /* margin atas, kanan-kiri (auto untuk tengah), bawah */
+  margin: 0 auto 15px auto;
 }
 .footer-section h3 {
   font-size: 18px;
@@ -543,11 +545,7 @@ body {
   opacity: 0.8;
 }
 
-/* =============================================== */
-/* STYLE HALAMAN UMKM */
-/* =============================================== */
-
-/* Section Video */
+/* ========== STYLE HALAMAN UMKM ========== */
 .umkm-video-section {
   padding: 20px 20px;
   background-color: #fdf9e1;
@@ -556,7 +554,7 @@ body {
 }
 
 .video-item {
-  width: auto; /* Ini akan membuat setiap video mengambil sepertiga dari lebar container dengan memperhitungkan gap. */
+  width: auto;
   height: auto;
   border-radius: 8px;
   overflow: hidden;
@@ -568,16 +566,13 @@ body {
   display: block;
 }
 
-/* Container untuk Video 16:9 */
 .video-responsive-container {
   position: relative;
-  /* (9 / 16) * 100% = 56.25% */
   padding-top: 56.25%;
   height: 0;
   overflow: hidden;
 }
 
-/* Video di dalamnya */
 .video-responsive-container video {
   position: absolute;
   top: 0;
@@ -586,7 +581,6 @@ body {
   height: 100%;
 }
 
-/* Bagian Produk */
 .umkm-products-section {
   padding: 60px 20px;
   background-color: #ffffff;
@@ -605,7 +599,7 @@ body {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 kolom di desktop */
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   justify-content: center;
 }
@@ -622,7 +616,7 @@ body {
 
 .product-image {
   width: 100%;
-  height: 200px; /* Ukuran gambar produk */
+  height: 200px;
   background-color: #e0e0e0;
   border-radius: 6px;
   overflow: hidden;
@@ -756,11 +750,7 @@ body {
   color: #777;
 }
 
-/* =============================================== */
-/* HALAMAN BUDAYA*/
-/* =============================================== */
-
-/* Hero Section Budaya */
+/* ========== HALAMAN BUDAYA ========== */
 .budaya-hero {
   background: url('img/sawah.png') center/cover no-repeat;
   height: 60vh;
@@ -788,10 +778,9 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Bagian Konten Budaya */
 .budaya-section {
   padding: 40px 20px;
-  background-color: white; /* Latar belakang section juga menjadi putih */
+  background-color: white;
 }
 
 .budaya-container {
@@ -799,24 +788,22 @@ body {
   margin: 0 auto;
 }
 
-/* Wrapper Latar Belakang Kuning */
 .card-block-wrapper {
-  background-color: var(--color-light-yellow); /* Memberi latar belakang kuning */
-  padding: 50px; /* Memberi jarak antara latar belakang kuning dan kartu putih */
+  background-color: var(--color-light-yellow);
+  padding: 50px;
   border-radius: 6px;
-  margin: 0 auto 30px auto; /* Memberi margin bawah untuk setiap blok dan membuatnya di tengah */
-  max-width: 1000px; /* Sesuaikan lebar maksimum */
+  margin: 0 auto 30px auto;
+  max-width: 1000px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Kartu Konten Putih */
 .content-card {
   background-color: white;
   color: black;
   padding: 30px;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Tambahkan atau pastikan properti ini ada */
+  text-align: center;
 }
 
 .content-card h2 {
@@ -840,7 +827,6 @@ body {
   margin-top: 10px;
 }
 
-/* Grid Gambar */
 .image-grid {
   display: flex;
   justify-content: center;
@@ -875,11 +861,7 @@ body {
   display: block;
 }
 
-/* =============================================== */
-/* HALAMAN SEJARAH */
-/* =============================================== */
-
-/* Hero Section Sejarah */
+/* ========== HALAMAN SEJARAH ========== */
 .sejarah-hero {
   background: url('img/sawah.png') center/cover no-repeat;
   height: 60vh;
@@ -907,20 +889,18 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Bagian Konten Sejarah */
 .sejarah-section {
-  background-color: var(--color-dark-green); /* Warna hijau gelap */
+  background-color: var(--color-dark-green);
   padding: 60px 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-/* Kartu Konten Sejarah */
 .sejarah-card {
   max-width: 1000px;
   margin: 0 auto;
-  background-color: var(--color-light-green); /* Warna hijau muda */
+  background-color: var(--color-light-green);
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -929,7 +909,6 @@ body {
   gap: 40px;
 }
 
-/* Mengubah urutan layout untuk kartu kedua dan seterusnya */
 .sejarah-card.reverse {
   flex-direction: row-reverse;
 }
@@ -959,22 +938,18 @@ body {
   text-decoration: none;
 }
 
-/* Placeholder Gambar */
 .sejarah-card .card-image {
   flex: 1;
 }
 
 .sejarah-card .placeholder-image {
   width: 100%;
-  height: 300px; /* Atur tinggi sesuai kebutuhan */
-  background-color: #dcdcdc; /* Warna abu-abu placeholder */
+  height: 300px;
+  background-color: #dcdcdc;
   border-radius: 8px;
 }
 
-/* =============================================== */
-/*ARTIKEL SEJARAH DAN BUDAYA*/
-/* =============================================== */
-
+/* ========== ARTIKEL SEJARAH DAN BUDAYA ========== */
 .main-content {
   max-width: 1000px;
   margin: 0 auto;
@@ -994,7 +969,6 @@ body {
 }
 
 .detail-image-carousel {
-  /* Tidak perlu diubah */
   position: relative;
   width: 100%;
   max-width: 800px;
@@ -1002,13 +976,9 @@ body {
 }
 
 .carousel-image {
-  /* Ubah lebar menjadi 90% */
   width: 90%;
-  /* Pindahkan margin otomatis untuk menempatkan di tengah */
   margin-left: auto;
   margin-right: auto;
-
-  /* Properti lainnya tetap sama */
   padding-top: 50%;
   background-color: #ffffff;
   border-radius: 8px;
@@ -1017,7 +987,6 @@ body {
 }
 
 .carousel-image img {
-  /* Tidak perlu diubah, karena sudah memenuhi parent */
   position: absolute;
   top: 0;
   left: 0;
@@ -1098,12 +1067,127 @@ body {
   gap: 15px;
 }
 
-/* ========== MEDIA QUERIES (RESPONSIVITAS) ========== */
+/* ========== UMKM DETAIL ========== */
+.umkm-detail {
+  display: flex;
+  gap: 30px;
+  background: #fff;
+  border: 2px solid #2f80ed;
+  border-radius: 10px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
 
+.umkm-image {
+  flex: 1;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.umkm-thumbnail {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.umkm-thumbnail img {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.umkm-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.umkm-title {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.umkm-price {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.umkm-desc {
+  margin-bottom: 20px;
+}
+
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 30%;
+}
+
+.btn-wa:hover {
+  background: #1ebe5d;
+}
+
+.btn-wa i {
+  font-size: 18px;
+}
+
+/* Video */
+.video-section {
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.video-title {
+  margin-bottom: 15px;
+}
+
+.video-section iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Footer */
+footer {
+  background: #f2f5c8;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+footer div {
+  margin: 5px;
+  max-width: 250px;
+}
+
+/* ========== MEDIA QUERIES (RESPONSIVITAS) ========== */
 @media (max-width: 768px) {
   /* Navbar */
   .navbar {
-    transform: translateX(-50%);
+    transform: none;
     left: 20px;
     right: 20px;
     width: auto;
@@ -1124,9 +1208,9 @@ body {
     border-radius: 0 0 10px 10px;
     list-style: none;
     text-align: center;
+    transform: translateX(-50%);
   }
 
-  /* Tampilkan menu saat kelas 'active' ditambahkan */
   .nav-links.active {
     display: flex;
   }
@@ -1163,19 +1247,18 @@ body {
 
   .carousel-container {
     width: 100%;
-    margin: 20px 0;
+    margin: 20px auto;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 15px;
   }
 
-  .carousel-item.small {
-    width: 60vw;
-    height: 60vw;
-  }
+  .carousel-item.small,
   .carousel-item.large {
-    width: 65vw;
-    height: 65vw;
+    width: 80vw;
+    height: 60vw;
   }
 
   /* Sections */
@@ -1298,13 +1381,15 @@ body {
   .slider {
     display: inline-flex;
     gap: 20px;
+    padding: 0 20px;
   }
 
   .slider img {
-    width: 300px;
-    height: auto;
+    width: 80vw;
+    height: 60vw;
     border-radius: 8px;
     object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .video-frame {
@@ -1347,10 +1432,18 @@ body {
   .product-grid {
     grid-template-columns: 1fr;
   }
+
+  .umkm-thumbnail img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .video-section iframe {
+    height: 200px;
+  }
 }
 
 @media (min-width: 769px) {
-  /* Susunan Profil: Teks dan Gambar Berdampingan */
   .profil {
     flex-direction: row;
     align-items: flex-start;
@@ -1377,27 +1470,27 @@ body {
 /* 1. CSS untuk Wadah (Mendorong Tombol ke Kanan) */
 .wadah-tombol {
   display: flex;
-  justify-content: flex-end; /* Ini kuncinya! Mendorong item ke ujung kanan */
-  padding: 20px; /* Memberi sedikit jarak dari tepi layar */
+  justify-content: flex-end;
+  padding: 20px;
 }
 
 /* 2. CSS untuk Tampilan Tombol */
 .tombol-ikon {
-  display: flex; /* Membuat ikon dan tulisan sejajar */
-  align-items: center; /* Menengahkan ikon dan tulisan secara vertikal */
+  display: flex;
+  align-items: center;
   padding: 10px 15px;
   font-size: 16px;
   color: white;
-  background-color: #c49166; /* Warna biru, bisa diganti */
+  background-color: #c49166;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Efek hover halus */
+  transition: background-color 0.3s ease;
 }
 
 /* 3. CSS untuk Memberi Jarak antara Ikon dan Tulisan */
 .tombol-ikon i {
-  margin-right: 8px; /* Jarak antara ikon dan tulisan */
+  margin-right: 8px;
 }
 
 /* 4. CSS untuk Efek saat Kursor di atas Tombol (Hover) */
@@ -1429,7 +1522,7 @@ body {
   border-radius: 20px;
   margin: 40px auto;
   padding: 40px 20px;
-  max-width: 900px; /* supaya ada ruang kiri kanan */
+  max-width: 900px;
 }
 
 .visi-misi h3 {
@@ -1460,27 +1553,30 @@ body {
 
 /* Gallery Slide */
 .slider-container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  position: relative;
-  margin-top: 20px;
+  width: 100%;
+  margin: 20px auto;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 15px;
 }
 
 .slider {
-  display: flex;
+  display: inline-flex;
   gap: 20px;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  padding: 0 20px;
 }
 
 .slider img {
-  width: 400px;
+  width: 300px;
   height: auto;
   border-radius: 10px;
   flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  scroll-snap-align: start;
 }
 
 /* Video Frame */
@@ -1500,12 +1596,12 @@ body {
 
 /* Peta */
 #peta {
-  background-color: #5b7052; /* hijau tua biar mirip figma */
+  background-color: #5b7052;
   padding: 40px 20px;
   text-align: center;
   border-radius: 12px;
   margin: 40px auto;
-  max-width: 900px; /* biar ga full satu layar */
+  max-width: 900px;
 }
 
 #peta h2 {
@@ -1519,11 +1615,11 @@ body {
 }
 
 .map-frame iframe {
-  width: 80%; /* perkecil ukuran peta */
-  height: 350px; /* tinggi lebih pendek */
-  border: 3px solid white; /* frame putih */
-  border-radius: 10px; /* sudut melengkung */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* bayangan halus */
+  width: 80%;
+  height: 350px;
+  border: 3px solid white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Detail UMKM */
@@ -1531,7 +1627,7 @@ body {
   display: flex;
   gap: 30px;
   background: #fff;
-  border: 2px solid #2f80ed; /* garis biru seperti di foto */
+  border: 2px solid #2f80ed;
   border-radius: 10px;
   padding: 20px;
   flex-wrap: wrap;
@@ -1586,8 +1682,8 @@ body {
 .btn-wa {
   display: inline-flex;
   align-items: center;
-  gap: 6px; /* jarak antara ikon & teks */
-  padding: 8px 12px; /* kiri–kanan lebih kecil */
+  gap: 6px;
+  padding: 8px 12px;
   background: #25d366;
   color: #fff;
   border-radius: 6px;
@@ -1595,7 +1691,7 @@ body {
   font-weight: bold;
   font-size: 14px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  width: 30%; /* penting: biar nggak melar */
+  width: 30%;
 }
 
 .btn-wa:hover {
@@ -1603,7 +1699,7 @@ body {
 }
 
 .btn-wa i {
-  font-size: 18px; /* ukuran ikon */
+  font-size: 18px;
 }
 
 /* Video */
