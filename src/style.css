@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -109,7 +109,7 @@ body {
 
 /* ========== HERO ========== */
 .hero {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 50%, white 50%, white 100%), url('img/sawah.png') center top / cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 50%, white 50%, white 100%), url("img/sawah.png") center top / cover no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -662,7 +662,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #333;
 }
 
@@ -670,7 +670,7 @@ body {
   max-width: 1500px;
   margin: 0 auto;
   padding: 20px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #333;
 }
 
@@ -766,7 +766,7 @@ body {
 
 /* ========== HALAMAN BUDAYA ========== */
 .budaya-hero {
-  background: url('img/sawah.png') center/cover no-repeat;
+  background: url("img/sawah.png") center/cover no-repeat;
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -803,12 +803,29 @@ body {
 }
 
 .card-block-wrapper {
-  background-color: var(--color-light-yellow);
+  background-color: var(--color-dark-green);
   padding: 50px;
   border-radius: 6px;
   margin: 0 auto 30px auto;
   max-width: 1000px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ini wajib agar ::after bisa meregang */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.selengkapnya::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Pastikan lapisan link ada di atas konten lain */
+}
+
+.card-block-wrapper:hover {
+  transform: translateY(-5px) !important; /* Gunakan !important jika ada konflik dengan AOS */
 }
 
 .content-card {
@@ -877,7 +894,7 @@ body {
 
 /* ========== HALAMAN SEJARAH ========== */
 .sejarah-hero {
-  background: url('img/sawah.png') center/cover no-repeat;
+  background: url("img/sawah.png") center/cover no-repeat;
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -887,7 +904,6 @@ body {
   color: white;
   text-align: center;
   padding: 0 20px;
-  margin-bottom: 40px;
 }
 
 .sejarah-hero .overlay {
@@ -904,7 +920,7 @@ body {
 }
 
 .sejarah-section {
-  background-color: var(--color-dark-green);
+  background-color: var(--color-light-white);
   padding: 60px 0;
   display: flex;
   flex-direction: column;
@@ -921,6 +937,25 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
+  position: relative; /* Ini Wajib! */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* 2. Perluas area klik link */
+.read-more::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Pastikan lapisan link ada di atas */
+}
+
+.sejarah-card:hover {
+  transform: translateY(-5px) !important; /* Card akan sedikit terangkat */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Bayangan lebih jelas */
 }
 
 .sejarah-card.reverse {
@@ -1779,6 +1814,10 @@ footer {
 footer div {
   margin: 5px;
   max-width: 250px;
+}
+
+.icon-footer i {
+  margin-right: 8px; /* Memberi jarak 10px di sebelah kanan ikon */
 }
 
 /* Responsive */
