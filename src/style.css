@@ -109,7 +109,7 @@ body {
 
 /* ========== HERO ========== */
 .hero {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 50%, white 50%, white 100%), url("img/sawah.png") center top / cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 50%, white 50%, white 100%), url("img/utama_tembakau.jpg") center top / cover no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -489,76 +489,6 @@ body {
   margin: 0 auto;
 }
 
-/* Footer */
-.site-footer {
-  background-color: var(--color-light-yellow);
-  color: black;
-  padding: 5px 5px;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 220px;
-  margin: 20px;
-  text-align: left;
-}
-
-.site-footer .footer-section .logo {
-  display: block;
-  max-width: 100px;
-  height: auto;
-  margin: 0 auto 15px auto;
-}
-.footer-section h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.footer-section p {
-  margin-top: 5px;
-}
-
-.footer-section a {
-  color: black;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-section a:hover {
-  color: #70856d;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.contact-item img {
-  height: 16px;
-  margin-right: 10px;
-}
-
-.social-icons a {
-  margin-right: 12px;
-}
-
-.social-icons img {
-  height: 24px;
-  transition: opacity 0.3s;
-}
-
-.social-icons img:hover {
-  opacity: 0.8;
-}
-
 /* ========== STYLE HALAMAN UMKM ========== */
 .umkm-video-section {
   padding: 20px 20px;
@@ -626,6 +556,17 @@ body {
   padding: 15px;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: inherit; /* ini bikin teks ikut warna default parent */
+}
+
+.product-card .product-name {
+  color: #333; /* atur ke warna yang kamu mau, contoh hitam */
+  text-decoration: none; /* biar underline hilang */
+}
+
+.product-card:hover .product-name {
+  color: #666; /* opsional: warna pas hover */
 }
 
 .product-image {
@@ -766,7 +707,7 @@ body {
 
 /* ========== HALAMAN BUDAYA ========== */
 .budaya-hero {
-  background: url("img/sawah.png") center/cover no-repeat;
+  background: url("img/bg_budaya.jpg") center/cover no-repeat;
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -989,13 +930,24 @@ body {
 
 .sejarah-card .card-image {
   flex: 1;
+  width: max-content;
+  height: max-content;
 }
 
 .sejarah-card .placeholder-image {
-  width: 100%;
+  width: 400px;
   height: 300px;
   background-color: #dcdcdc;
   border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;       /* biar tetap center */
+}
+
+.sejarah-card .placeholder-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* biar penuh tanpa menyusut */
+  display: block;
 }
 
 /* ========== ARTIKEL SEJARAH DAN BUDAYA ========== */
@@ -1118,10 +1070,10 @@ body {
 
 /* ========== UMKM DETAIL ========== */
 .umkm-detail {
-  display: flex;
+ display: flex;
   gap: 30px;
   background: #fff;
-  border: 2px solid #2f80ed;
+  border: none; /* ✅ hapus border biru */
   border-radius: 10px;
   padding: 20px;
   flex-wrap: wrap;
@@ -1231,6 +1183,78 @@ footer div {
   margin: 5px;
   max-width: 250px;
 }
+
+.site-footer {
+  background-color: var(--color-light-yellow);
+  color: black;
+  padding: 12px 20px;      /* lebih pendek */
+  display: flex;
+  align-items: center;     /* sejajar tengah */
+  justify-content: center; /* center horizontal */
+  gap: 60px;               /* jarak antar kolom */
+  font-size: 14px;
+  line-height: 1.4;        /* rapetin line */
+}
+
+/* Bagian logo + teks pemerintah */
+.footer-left {
+  display: flex;
+  align-items: center;    /* logo & teks sejajar vertikal */
+  gap: 15px;              /* jarak logo dan teks */
+  max-width: 450px;       /* bikin lebih lebar */
+}
+
+.footer-left img.logo {
+  width: 70px;   /* logo cukup */
+  height: auto;
+}
+
+.footer-left .footer-text {
+  text-align: left;
+  max-width: 350px;   /* teks bisa melebar */
+}
+
+.footer-section {
+  text-align: left;
+}
+
+.footer-left .footer-text h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.footer-left .footer-text p {
+  margin: 3px 0;
+  line-height: 1.4;
+}
+
+.footer-section a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #70856d;
+}
+
+.icon-footer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; /* lebih rapat */
+}
+
+.icon-footer i {
+  margin-right: 6px;
+  font-size: 14px; /* ikon lebih kecil */
+}
+
+.icon-footer img {
+  height: 18px;  /* sosial media icon lebih kecil */
+  margin-right: 8px;
+}
+
 
 /* ========== MEDIA QUERIES (RESPONSIVITAS) ========== */
 @media (max-width: 768px) {
@@ -1772,13 +1796,20 @@ footer div {
   width: 30%;
 }
 
-.btn-wa:hover {
-  background: #1ebe5d;
+.btn-wa {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #25d366; /* hijau WA */
+  color: white; /* teks jadi putih */
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.btn-wa i {
-  font-size: 18px;
+.btn-wa:hover {
+  background-color: #1ebe5b;
 }
+
 
 /* Video */
 .video-section {
@@ -1857,3 +1888,90 @@ footer div {
     height: 200px;
   }
 }
+
+/* ================= STRUKTUR PEMERINTAHAN DESA ================= */
+.staff-section {
+  background: var(--color-light-yellow);
+  padding: 40px 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.staff-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* RW Group */
+.rw-group {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.official-card.rw {
+  background: var(--color-light-green);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 220px;
+  margin: 0 auto 20px auto;
+}
+
+.official-card.rw .name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.official-card.rw .title {
+  font-size: 14px;
+  color: #555;
+}
+
+/* RT Grid di bawah RW */
+.rt-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.official-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 180px;
+}
+
+.official-card:hover {
+  transform: translateY(-5px);
+}
+
+.official-card .profile-picture {
+  width: 100px;
+  height: 100px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.official-card .name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.official-card .title {
+  font-size: 13px;
+  color: #666;
+}
+
