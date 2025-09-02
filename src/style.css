@@ -101,6 +101,14 @@ body {
   color: #333;
   font-weight: 500;
   transition: color 0.3s;
+  
+}
+
+/* Style untuk link navbar yang sedang aktif */
+.nav-links a.active {
+  font-weight: bold;
+  /* Anda juga bisa menambahkan style lain, misalnya warna */
+  color: var(--color-brown); 
 }
 
 .nav-links a:hover {
@@ -428,10 +436,22 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  position: relative; /* Wajib ada agar link bisa meregang */
+  cursor: pointer;
 }
 
 .umkm-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) !important;
+}
+
+.umkm-card .umkm-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 .umkm-card img {
@@ -940,13 +960,13 @@ body {
   background-color: #dcdcdc;
   border-radius: 8px;
   overflow: hidden;
-  margin: 0 auto;       /* biar tetap center */
+  margin: 0 auto; /* biar tetap center */
 }
 
 .sejarah-card .placeholder-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;    /* biar penuh tanpa menyusut */
+  object-fit: cover; /* biar penuh tanpa menyusut */
   display: block;
 }
 
@@ -1070,10 +1090,10 @@ body {
 
 /* ========== UMKM DETAIL ========== */
 .umkm-detail {
- display: flex;
+  display: flex;
   gap: 30px;
   background: #fff;
-  border: none; /* ✅ hapus border biru */
+  border: 2px solid var(--color-dark-green) !important;
   border-radius: 10px;
   padding: 20px;
   flex-wrap: wrap;
@@ -1084,7 +1104,8 @@ body {
 }
 
 .main-img {
-  width: 100%;
+  width: 70px;
+  height: 250px;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -1123,6 +1144,24 @@ body {
 
 .umkm-desc {
   margin-bottom: 20px;
+}
+
+.umkm-thumbnail .thumbnail-img {
+  cursor: pointer; /* Mengubah ikon mouse menjadi tangan saat di atas thumbnail */
+  border: 2px solid transparent; /* Border transparan sebagai dasar */
+  transition: border-color 0.2s ease;
+  border-radius: 5px; /* Sedikit lengkungan di sudut */
+  opacity: 0.7;
+}
+
+.umkm-thumbnail .thumbnail-img:hover {
+  opacity: 1; /* Terlihat lebih jelas saat disentuh mouse */
+}
+
+/* Style untuk thumbnail yang sedang aktif/dipilih */
+.umkm-thumbnail .thumbnail-img.active {
+  border-color: var(--color-brown); /* Warna border sesuai tema Anda */
+  opacity: 1;
 }
 
 .btn-wa {
@@ -1187,31 +1226,31 @@ footer div {
 .site-footer {
   background-color: var(--color-light-yellow);
   color: black;
-  padding: 12px 20px;      /* lebih pendek */
+  padding: 12px 20px; /* lebih pendek */
   display: flex;
-  align-items: center;     /* sejajar tengah */
+  align-items: center; /* sejajar tengah */
   justify-content: center; /* center horizontal */
-  gap: 60px;               /* jarak antar kolom */
+  gap: 60px; /* jarak antar kolom */
   font-size: 14px;
-  line-height: 1.4;        /* rapetin line */
+  line-height: 1.4; /* rapetin line */
 }
 
 /* Bagian logo + teks pemerintah */
 .footer-left {
   display: flex;
-  align-items: center;    /* logo & teks sejajar vertikal */
-  gap: 15px;              /* jarak logo dan teks */
-  max-width: 450px;       /* bikin lebih lebar */
+  align-items: center; /* logo & teks sejajar vertikal */
+  gap: 15px; /* jarak logo dan teks */
+  max-width: 450px; /* bikin lebih lebar */
 }
 
 .footer-left img.logo {
-  width: 70px;   /* logo cukup */
+  width: 70px; /* logo cukup */
   height: auto;
 }
 
 .footer-left .footer-text {
   text-align: left;
-  max-width: 350px;   /* teks bisa melebar */
+  max-width: 350px; /* teks bisa melebar */
 }
 
 .footer-section {
@@ -1251,10 +1290,9 @@ footer div {
 }
 
 .icon-footer img {
-  height: 18px;  /* sosial media icon lebih kecil */
+  height: 18px; /* sosial media icon lebih kecil */
   margin-right: 8px;
 }
-
 
 /* ========== MEDIA QUERIES (RESPONSIVITAS) ========== */
 @media (max-width: 768px) {
@@ -1810,7 +1848,6 @@ footer div {
   background-color: #1ebe5b;
 }
 
-
 /* Video */
 .video-section {
   margin-top: 30px;
@@ -1896,7 +1933,7 @@ footer div {
   border-radius: 10px;
   max-width: 1200px;
   margin: 40px auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .staff-section h2 {
@@ -1916,7 +1953,7 @@ footer div {
   background: var(--color-light-green);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 220px;
   margin: 0 auto 20px auto;
 }
@@ -1946,7 +1983,7 @@ footer div {
   border-radius: 10px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   width: 100%;
   max-width: 180px;
@@ -1974,4 +2011,3 @@ footer div {
   font-size: 13px;
   color: #666;
 }
-

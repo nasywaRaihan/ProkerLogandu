@@ -24,9 +24,9 @@
         <div class="umkm-image">
           <img src="img/oyek.jpg" alt="Produk Oyek" class="main-img" />
           <div class="umkm-thumbnail">
-            <img src="img/oyek.jpg" alt="thumb1" />
-            <img src="img/oyek2.jpg" alt="thumb2" />
-            <img src="img/oyek3.jpg" alt="thumb3" />
+            <img src="img/oyek.jpg" alt="thumbnail-img" class="thumbnail-img" />
+            <img src="img/oyek2.jpg" alt="thumbnail-img" class="thumbnail-img"/>
+            <img src="img/oyek3.jpg" alt="thumbnail-img" class="thumbnail-img"/>
           </div>
         </div>
 
@@ -46,7 +46,11 @@
       <!-- Video -->
       <section class="video-section" data-aos="fade-up">
         <h2 class="video-title">Video Pembuatan Oyek</h2>
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        <div class="video-item">
+            <div class="video-responsive-container">
+              <video src="img/vidoyek.mp4" controls width="600"></video>
+            </div>
+          </div>
       </section>
     </main>
 
@@ -59,5 +63,8 @@
     <script>
       AOS.init({ duration: 1000 });
     </script>
+
+    <script src="script.js"></script>
+
   </body>
 </html>
