@@ -36,7 +36,7 @@ body {
   border-radius: 10px;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 60px;
   justify-content: space-between;
 }
 
@@ -57,7 +57,7 @@ body {
 .navbar-brand .logo {
   height: 40px;
   width: 28px;
-  margin-right: 10px;
+  margin-right: 0px;
 }
 
 .brand-text {
@@ -70,13 +70,17 @@ body {
   font-size: 19px;
   font-weight: bold;
   color: #333;
-  margin-left: 10px;
+  margin-left: 20px;
+  margin-bottom: 2px; /* Beri sedikit jarak agar tidak terlalu mepet */
+  line-height: 1; /* Atur tinggi baris */
 }
 
 .brand-text .regency-name {
   font-size: 16px;
   color: #555;
-  margin-left: 10px;
+  margin-left: 20px;
+  margin-top: 0;
+  line-height: 1;
 }
 
 .menu-toggle {
@@ -698,10 +702,37 @@ body {
   color: #555;
 }
 
+.welcome-speech p {
+  text-align: justify;
+}
+
+
 .staff-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+}
+
+.official-card-kades .profile-picture {
+  width: 120px;
+  height: 120px; 
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+  object-fit: cover;
+  margin-top: 25px;
+}
+
+.official-card-kades .name {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+
+}
+
+.official-card-kades .title {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
 }
 
 .official-card .profile-picture {
@@ -875,6 +906,13 @@ body {
 
 .sejarah-hero h1 {
   font-size: 2.5rem;
+  z-index: 2;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.sejarah-hero h4 {
+  font-size: 1rem;
   z-index: 2;
   position: relative;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -1144,6 +1182,7 @@ body {
 
 .umkm-desc {
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .umkm-thumbnail .thumbnail-img {
@@ -1167,16 +1206,17 @@ body {
 .btn-wa {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
+  gap: 2px;
+  padding: 8px 8px;
   background: #25d366;
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   width: 30%;
+
 }
 
 .btn-wa:hover {
@@ -1184,7 +1224,8 @@ body {
 }
 
 .btn-wa i {
-  font-size: 18px;
+  font-size: 19px;
+  margin-right: 5px;
 }
 
 /* Video */
@@ -1429,10 +1470,6 @@ footer div {
 
   .contact-item {
     justify-content: center;
-  }
-
-  .sejarah-hero h1 {
-    font-size: 2rem;
   }
 
   .sejarah-card {
