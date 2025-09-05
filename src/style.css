@@ -656,13 +656,20 @@ body {
   color: #666;
 }
 
-.chart-placeholder {
+/* Style untuk pembungkus/container */
+.chart-container {
   width: 100%;
-  height: 750px;
+  margin-bottom: 20px; 
   background-color: #f9f9f9;
-  border: 1px dashed #ccc;
+  border: 2.5px dashed #ccc;
   border-radius: 8px;
-  margin-bottom: 40px;
+}
+
+/* Style KHUSUS untuk gambar */
+.org-chart-image {
+  width: 100%; /* Membuat gambar responsif */
+  height: auto;
+  display: block; /* ✅ Ini akan menghilangkan celah kecil misterius di bawah gambar */
 }
 
 .officials-section,
@@ -1266,7 +1273,7 @@ footer div {
 
 .site-footer {
   background-color: var(--color-light-yellow);
-  color: black;
+  color: #333;
   padding: 12px 20px; /* lebih pendek */
   display: flex;
   align-items: center; /* sejajar tengah */
@@ -1310,7 +1317,7 @@ footer div {
 }
 
 .footer-section a {
-  color: black;
+  color: #333;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -1325,15 +1332,11 @@ footer div {
   margin-bottom: 5px; /* lebih rapat */
 }
 
-.icon-footer i {
-  margin-right: 6px;
-  font-size: 14px; /* ikon lebih kecil */
-}
-
-.icon-footer img {
-  height: 18px; /* sosial media icon lebih kecil */
-  margin-right: 8px;
-}
+.social-media-links a {
+    font-size: 24px; /* Atur ukuran ikon */
+    color: #333;      /* Atur warna ikon */
+    margin: 0 10px;  /* Beri jarak antar ikon */
+  }
 
 /* ========== MEDIA QUERIES (RESPONSIVITAS) ========== */
 @media (max-width: 768px) {
