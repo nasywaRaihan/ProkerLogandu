@@ -105,14 +105,13 @@ body {
   color: #333;
   font-weight: 500;
   transition: color 0.3s;
-  
 }
 
 /* Style untuk link navbar yang sedang aktif */
 .nav-links a.active {
   font-weight: bold;
   /* Anda juga bisa menambahkan style lain, misalnya warna */
-  color: var(--color-brown); 
+  color: var(--color-brown);
 }
 
 .nav-links a:hover {
@@ -449,7 +448,7 @@ body {
 }
 
 .umkm-card .umkm-link::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -489,6 +488,57 @@ body {
 
 .umkm-link:hover {
   color: var(--color-brown);
+}
+
+.page-container {
+  display: grid;
+  /* Kolom pertama auto, kolom kedua mengisi sisa ruang */
+  grid-template-columns: auto 1fr;
+  gap: 40px; /* Jarak antara tombol dan konten */
+  align-items: start; /* Konten dimulai dari atas */
+
+  /* Aturan untuk menjaga agar layout tetap di tengah halaman */
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+/* 1. Container yang menjadi jangkar/acuan posisi */
+.page-with-side-button {
+  /* Atur lebar maksimal dan posisikan di tengah halaman */
+  max-width: 900px; /* Lebar maksimal konten Anda */
+  margin: 40px auto;
+
+  /* PENTING: Jadikan ini sebagai acuan untuk tombol */
+  position: relative;
+}
+
+/* 2. Tombol yang diposisikan secara absolut di luar jangkar */
+.back-button-side {
+  position: sticky;
+  top: 100px; /* Posisikan di bagian atas */
+
+  /* Posisikan di sebelah kiri container. Sesuaikan nilainya jika perlu. */
+  left: -80px;
+
+  /* Style visual tombol */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.back-button-side:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.1);
 }
 
 /* Peta Desa */
@@ -659,7 +709,7 @@ body {
 /* Style untuk pembungkus/container */
 .chart-container {
   width: 100%;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   background-color: #f9f9f9;
   border: 2.5px dashed #ccc;
   border-radius: 8px;
@@ -713,7 +763,6 @@ body {
   text-align: justify;
 }
 
-
 .staff-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -722,7 +771,7 @@ body {
 
 .official-card-kades .profile-picture {
   width: 120px;
-  height: 120px; 
+  height: 120px;
   border-radius: 50%;
   margin: 0 auto 15px auto;
   object-fit: cover;
@@ -733,7 +782,6 @@ body {
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-
 }
 
 .official-card-kades .title {
@@ -1210,7 +1258,7 @@ body {
   opacity: 1;
 }
 
-.btn-wa {
+ .umkm-info .btn-wa {
   display: inline-flex;
   align-items: center;
   gap: 2px;
@@ -1220,10 +1268,9 @@ body {
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   width: 30%;
-
 }
 
 .btn-wa:hover {
@@ -1333,10 +1380,10 @@ footer div {
 }
 
 .social-media-links a {
-    font-size: 24px; /* Atur ukuran ikon */
-    color: #333;      /* Atur warna ikon */
-    margin: 0 10px;  /* Beri jarak antar ikon */
-  }
+  font-size: 24px; /* Atur ukuran ikon */
+  color: #333; /* Atur warna ikon */
+  margin: 0 10px; /* Beri jarak antar ikon */
+}
 
 /* ========== MEDIA QUERIES (RESPONSIVITAS) ========== */
 @media (max-width: 768px) {
