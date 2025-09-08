@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UMKM Desa Logandu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+      <header class="page-header" data-aos="fade-down">
+        <h1>UMKM Desa Logandu</h1>
+        <p>Produk Unggulan dan Inovasi Warga Desa Logandu</p>
+      </header>
+
+      <section class="umkm-video-section">
+        <div class="video-grid">
+          <div class="video-item">
+            <div class="video-responsive-container">
+              <video src="img/advv.MOV" autoplay muted loop></video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="umkm-products-section" data-aos="fade-up">
+        <h2>Produk Unggulan</h2>
+        <p>Jelajahi berbagai produk lokal yang dibuat oleh warga desa dengan penuh cinta.</p>
+
+        <div class="product-grid">
+          <a href="detail_umkm.html" class="product-card">
+            <div class="product-image">
+              <img src="img/oyek.jpg" alt="Oyek" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">Oyek Bu Sulis</span>
+              <span class="product-price">Rp 7.000 - 15.000</span>
+            </div>
+          </a>
+
+          <a href="detail_umkm2.html" class="product-card">
+            <div class="product-image">
+              <img src="img/golak1.jpg" alt="Golak" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">Golak Bu Semi</span>
+              <span class="product-price">Rp 3.000</span>
+            </div>
+          </a>
+
+          <a href="detail_umkm3.html" class="product-card">
+            <div class="product-image">
+              <img src="img/cerutu1.jpg" alt="Cerutu" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">Cerutu</span>
+              <span class="product-price">Rp 30.000</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000 });
+    </script>
+  </body>
+</html>
