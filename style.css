@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
   color: var(--color-dark-green);
   overflow-x: hidden;
 
-  background-image: url("img/teksturBatik.png");
+  background-image: url('img/teksturBatik.png');
   background-repeat: repeat;
   background-size: 100px;
 }
@@ -124,7 +124,7 @@ body {
 
 /* ========== HERO ========== */
 .hero {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 50%, white 50%, white 100%), url("img/utama_tembakau.jpg") center top / cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 50%, white 50%, white 100%), url('img/utama_tembakau.jpg') center top / cover no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -452,7 +452,7 @@ body {
 }
 
 .umkm-card .umkm-link::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -496,35 +496,29 @@ body {
 
 .page-container {
   display: grid;
-  /* Kolom pertama auto, kolom kedua mengisi sisa ruang */
   grid-template-columns: auto 1fr;
-  gap: 40px; /* Jarak antara tombol dan konten */
-  align-items: start; /* Konten dimulai dari atas */
+  gap: 40px;
+  align-items: start;
 
-  /* Aturan untuk menjaga agar layout tetap di tengah halaman */
   max-width: 1000px;
   margin: 20px auto;
   padding: 0 20px;
 }
-/* 1. Container yang menjadi jangkar/acuan posisi */
+
 .page-with-side-button {
-  /* Atur lebar maksimal dan posisikan di tengah halaman */
-  max-width: 900px; /* Lebar maksimal konten Anda */
+  max-width: 900px;
   margin: 40px auto;
 
   /* PENTING: Jadikan ini sebagai acuan untuk tombol */
   position: relative;
 }
 
-/* 2. Tombol yang diposisikan secara absolut di luar jangkar */
 .back-button-side {
   position: sticky;
-  top: 100px; /* Posisikan di bagian atas */
+  top: 100px;
 
-  /* Posisikan di sebelah kiri container. Sesuaikan nilainya jika perlu. */
   left: -80px;
 
-  /* Style visual tombol */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -681,12 +675,12 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #333;
 }
 
 .main-content-profile {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #333;
 
   background-color: var(--color-light-white);
@@ -819,7 +813,7 @@ body {
 
 /* ========== HALAMAN BUDAYA ========== */
 .budaya-hero {
-  background: url("img/bg_budaya.jpg") center/cover no-repeat;
+  background: url('img/bg_budaya.jpg') center/cover no-repeat;
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -868,7 +862,7 @@ body {
 }
 
 .selengkapnya::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -947,7 +941,7 @@ body {
 
 /* ========== HALAMAN SEJARAH ========== */
 .sejarah-hero {
-  background: url("img/sawah.png") center/cover no-repeat;
+  background: url('img/1.jpg') center/cover no-repeat;
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -986,7 +980,7 @@ body {
   flex-direction: column;
   gap: 40px;
 
-  background-image: url("img/teksturBatik.png");
+  background-image: url('img/teksturBatik.png');
   background-repeat: repeat;
   background-size: 100px;
 }
@@ -1008,7 +1002,7 @@ body {
 
 /* 2. Perluas area klik link */
 .read-more::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -1596,7 +1590,7 @@ footer div {
 
   .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin-bottom: 20px;
   }
 
   .card {
@@ -1632,22 +1626,6 @@ footer div {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
-  .video-frame {
-    position: relative;
-    padding-top: 56.25%;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .video-frame iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-  }
-
   .map-frame {
     position: relative;
     width: 100%;
@@ -1665,6 +1643,59 @@ footer div {
     border: 0;
     border-radius: 8px;
   }
+
+  .back-button-side {
+    display: none;
+  }
+
+  .profil {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profil-text {
+    flex: none;
+    order: 2;
+    padding: 0 10px;
+    text-align: justify;
+    margin-left: 40px;
+    width: 100%;
+  }
+
+  .profil-img {
+    flex: none;
+    order: 1;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .sejarah-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* Mengatur ulang lebar dan tinggi gambar agar responsif */
+  .sejarah-card .placeholder-image {
+    width: 300px;
+    height: 200px;
+
+    background-color: #dcdcdc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  /* Memastikan gambar mengisi penuh kontainer */
+  .sejarah-card .placeholder-image img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1679,24 +1710,6 @@ footer div {
 
   .video-section iframe {
     height: 200px;
-  }
-}
-
-@media (min-width: 769px) {
-  .profil {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .profil-text {
-    flex: 1;
-    order: 1;
-    padding-right: 30px;
-  }
-
-  .profil-img {
-    flex: 1;
-    order: 2;
   }
 }
 
@@ -1742,7 +1755,7 @@ footer div {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 5px ;
+  padding: 5px;
 }
 
 .profil-text {
@@ -1778,52 +1791,13 @@ footer div {
   text-align: center;
 }
 
-/* Gallery umum */
-.gallery {
-  text-align: center;
-  margin: 50px auto;
-}
-
-.gallery img {
-  max-width: 80%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Gallery Slide */
-.slider-container {
-  width: 100%;
-  margin: 20px auto;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 15px;
-}
-
-.slider {
-  display: inline-flex;
-  gap: 20px;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  padding: 0 20px;
-}
-
-.slider img {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  flex-shrink: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  scroll-snap-align: start;
-}
-
- .kisah-section {
+.kisah-section {
   padding: 20px 0px;
   max-width: 1000px;
-  margin: auto;
   text-align: center;
   border-radius: 8px;
+  margin: 0 auto; /* Pusatkan kontainer di tengah halaman */
+  padding: 0 20px;
 }
 
 .kisah-section h2 {
@@ -1832,20 +1806,20 @@ footer div {
 }
 
 .btn-download {
-  display: flex; /* Agar bisa diatur di tengah */
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 30px; /* Jarak dari video di atasnya */
-  width: 100%;
+  width: auto;
+  margin: 30px 30px 0 30px;
+
   padding: 12px 25px;
-  background-color: var(--color-light-yellow); /* Menggunakan variabel warna cokelat Anda */
+  background-color: var(--color-light-yellow);
   color: var(--color-brown);
   text-decoration: none;
   font-weight: bold;
   border-radius: 8px;
   border: 2px solid var(--color-brown);
-  
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s;
 }
@@ -1859,19 +1833,23 @@ footer div {
   font-size: 18px;
 }
 
-
 /* Video Frame */
 .video-frame {
-  background: var(--color-light-yellow);
-  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
   border-radius: 15px;
+  background: var(--color-light-yellow);
   max-width: 1100px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .video-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 400px;
+  height: 100%;
   border-radius: 12px;
 }
 
@@ -1975,16 +1953,6 @@ footer div {
   width: 30%;
 }
 
-.btn-wa {
-  display: inline-block;
-  padding: 10px 15px;
-  background-color: #25d366; /* hijau WA */
-  color: white; /* teks jadi putih */
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
 .btn-wa:hover {
   background-color: #1ebe5b;
 }
@@ -2053,6 +2021,10 @@ footer div {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .btn-download {
+    margin: 30px 10px 0 10px;
   }
 }
 
