@@ -23,6 +23,7 @@ body {
   background-image: url('img/teksturBatik.png');
   background-repeat: repeat;
   background-size: 100px;
+  overflow-x: hidden !important;
 }
 
 /* ========== NAVBAR ========== */
@@ -1245,20 +1246,19 @@ body {
 }
 
 .umkm-thumbnail .thumbnail-img {
-  cursor: pointer; /* Mengubah ikon mouse menjadi tangan saat di atas thumbnail */
-  border: 2px solid transparent; /* Border transparan sebagai dasar */
+  cursor: pointer;
+  border: 2px solid transparent;
   transition: border-color 0.2s ease;
-  border-radius: 5px; /* Sedikit lengkungan di sudut */
+  border-radius: 5px;
   opacity: 0.7;
 }
 
 .umkm-thumbnail .thumbnail-img:hover {
-  opacity: 1; /* Terlihat lebih jelas saat disentuh mouse */
+  opacity: 1;
 }
 
-/* Style untuk thumbnail yang sedang aktif/dipilih */
 .umkm-thumbnail .thumbnail-img.active {
-  border-color: var(--color-brown); /* Warna border sesuai tema Anda */
+  border-color: var(--color-brown);
   opacity: 1;
 }
 
@@ -1389,344 +1389,12 @@ footer div {
   margin: 0 10px; /* Beri jarak antar ikon */
 }
 
-/* ========== MEDIA QUERIES (RESPONSIVITAS) ========== */
-@media (max-width: 768px) {
-  /* Navbar */
-  .navbar {
-    transform: none;
-    left: 10px;
-    right: 10px;
-    width: auto;
-    justify-content: space-between;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    width: 50%;
-    left: 75%;
-    background-color: var(--color-light-yellow);
-    opacity: 95%;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 10px 10px;
-    list-style: none;
-    text-align: center;
-    transform: translateX(-50%);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links a {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-  }
-
-  .menu-toggle .bar {
-    width: 100%;
-    height: 3px;
-    background-color: var(--color-dark-green);
-    transition: all 0.3s ease-in-out;
-  }
-
-  /* Carousel dan Hero Section */
-  .hero h2 {
-    font-size: 1.5rem;
-    margin-top: 20%;
-  }
-
-  .hero-desc {
-    font-size: 0.9rem;
-  }
-
-  .carousel-container {
-    width: 100%;
-    margin: 20px auto;
-    overflow-x: auto;
-    overflow-y: hidden; /* supaya gak ada scroll atas-bawah */
-    display: flex;
-    gap: 15px; /* jarak antar gambar */
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    padding: 10px;
-  }
-
-  .carousel-track {
-    display: flex;
-  }
-
-  .carousel-item {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    border-radius: 10px;
-    overflow: hidden; /* biar gambar gak keluar dari kotak */
-    background: #fff;
-  }
-
-  /* Ukuran untuk gambar kecil */
-  .carousel-item.small {
-    width: 140px;
-    height: 140px;
-  }
-
-  /* Ukuran untuk gambar besar */
-  .carousel-item.large {
-    width: 200px;
-    height: 180px;
-  }
-
-  /* Gambar isi penuh kotak */
-  .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* isi penuh tanpa gepeng */
-    display: block;
-  }
-
-  /* Sections */
-  .card-container,
-  .deskripsi-card,
-  .sejarah-budaya-container,
-  .head-official-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .card-container .card {
-    min-width: auto;
-    width: 100%;
-  }
-
-  .deskripsi-text {
-    text-align: center;
-  }
-
-  .staff-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-section {
-    text-align: center;
-  }
-
-  .contact-item {
-    justify-content: center;
-  }
-
-  .sejarah-card {
-    flex-direction: column;
-    text-align: center;
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .sejarah-card.reverse {
-    flex-direction: column;
-  }
-
-  .sejarah-card .card-text {
-    text-align: center;
-  }
-
-  .sejarah-card .card-text h2 {
-    text-align: center;
-  }
-
-  /* UMKM (Digabungkan) */
-  .video-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Responsif Umum untuk Profil, Galeri, Video, dan Peta */
-  .main-content-profile {
-    padding: 20px;
-  }
-
-  .profil {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .profil-text {
-    order: 2;
-    text-align: justify;
-  }
-
-  .profil-img {
-    order: 1;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-  }
-
-  .profil-img img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .container {
-    max-width: 800px;
-    margin-bottom: 20px;
-  }
-
-  .card {
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-
-  .gallery {
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  .slider-container {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 15px;
-  }
-
-  .slider {
-    display: inline-flex;
-    gap: 20px;
-    padding: 0 20px;
-  }
-
-  .slider img {
-    width: 80vw;
-    height: 60vw;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .map-frame {
-    position: relative;
-    width: 100%;
-    padding-top: 75%;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .map-frame iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    border-radius: 8px;
-  }
-
-  .back-button-side {
-    display: none;
-  }
-
-  .profil {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profil-text {
-    flex: none;
-    order: 2;
-    padding: 0 10px;
-    text-align: justify;
-    margin-left: 40px;
-    width: 100%;
-  }
-
-  .profil-img {
-    flex: none;
-    order: 1;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-  }
-
-  .sejarah-card {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  /* Mengatur ulang lebar dan tinggi gambar agar responsif */
-  .sejarah-card .placeholder-image {
-    width: 300px;
-    height: 200px;
-
-    background-color: #dcdcdc;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-
-  /* Memastikan gambar mengisi penuh kontainer */
-  .sejarah-card .placeholder-image img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-}
-
-@media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .umkm-thumbnail img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .video-section iframe {
-    height: 200px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .staff-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* 1. CSS untuk Wadah (Mendorong Tombol ke Kanan) */
 .wadah-tombol {
   display: flex;
   justify-content: flex-end;
   padding: 20px;
 }
 
-/* 2. CSS untuk Tampilan Tombol */
 .tombol-ikon {
   display: flex;
   align-items: center;
@@ -1740,12 +1408,10 @@ footer div {
   transition: background-color 0.3s ease;
 }
 
-/* 3. CSS untuk Memberi Jarak antara Ikon dan Tulisan */
 .tombol-ikon i {
   margin-right: 8px;
 }
 
-/* 4. CSS untuk Efek saat Kursor di atas Tombol (Hover) */
 .tombol-ikon:hover {
   background-color: #70856d;
 }
@@ -1997,48 +1663,6 @@ footer div {
   margin-right: 8px; /* Memberi jarak 10px di sebelah kanan ikon */
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .umkm-detail {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .umkm-thumbnail {
-    justify-content: center;
-  }
-
-  .btn-wa {
-    width: 100%;
-    text-align: center;
-  }
-
-  .video-section iframe {
-    height: 250px;
-  }
-
-  footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .btn-download {
-    margin: 30px 10px 0 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .umkm-thumbnail img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .video-section iframe {
-    height: 200px;
-  }
-}
-
 /* ================= STRUKTUR PEMERINTAHAN DESA ================= */
 .staff-section {
   background: var(--color-light-yellow);
@@ -2123,4 +1747,378 @@ footer div {
 .official-card .title {
   font-size: 13px;
   color: #666;
+}
+
+/* ========== MEDIA QUERIES (RESPONSIVITAS) ========== */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    transform: none;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    width: 50%;
+    left: 75%;
+    background-color: var(--color-light-yellow);
+    opacity: 95%;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    list-style: none;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-dark-green);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Carousel dan Hero Section */
+  .hero h2 {
+    font-size: 1.5rem;
+    margin-top: 20%;
+  }
+
+  .hero-desc {
+    font-size: 0.9rem;
+  }
+
+  .carousel-container {
+    width: 100%;
+    margin: 20px 0; /* Ganti margin horizontal menjadi 0 */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    /* Hapus gap di sini, kita akan gunakan margin di carousel-item */
+    gap: 0;
+    scroll-snap-type: x mandatory;
+    padding: 0; /* Hapus padding agar tidak ada overflow */
+  }
+
+  .carousel-track {
+    display: flex;
+    padding-left: 20px; /* Tambahkan padding di sini untuk ruang di kiri */
+    padding-right: 20px;
+  }
+
+  .carousel-item {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    /* Gunakan margin di sini untuk membuat jarak antar item */
+    margin-right: 15px;
+  }
+
+  /* Ukuran untuk gambar kecil */
+  .carousel-item.small {
+    width: 250px;
+    height: 250px;
+    margin-top: 25px;
+  }
+
+  /* Ukuran untuk gambar besar */
+  .carousel-item.large {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Gambar isi penuh kotak */
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Sections */
+  .card-container,
+  .deskripsi-card,
+  .sejarah-budaya-container,
+  .head-official-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-container .card {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .deskripsi-text {
+    text-align: center;
+  }
+
+  .staff-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .sejarah-card {
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sejarah-card.reverse {
+    flex-direction: column;
+  }
+
+  .sejarah-card .card-text {
+    text-align: center;
+  }
+
+  .sejarah-card .card-text h2 {
+    text-align: center;
+  }
+
+  /* UMKM (Digabungkan) */
+  .video-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Responsif Umum untuk Profil, Galeri, Video, dan Peta */
+  .main-content-profile {
+    padding: 20px;
+  }
+
+  .profil {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .profil-text {
+    order: 2;
+    text-align: justify;
+  }
+
+  .profil-img {
+    order: 1;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+
+  .profil-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .container {
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .gallery {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .slider-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 15px;
+  }
+
+  .slider {
+    display: inline-flex;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .slider img {
+    width: 80vw;
+    height: 60vw;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .map-frame {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .map-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+  }
+
+  .back-button-side {
+    display: none;
+  }
+
+  .profil {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profil-text {
+    flex: none;
+    order: 2;
+    padding: 0 10px;
+    text-align: justify;
+    margin-left: 40px;
+    width: 100%;
+  }
+
+  .profil-img {
+    flex: none;
+    order: 1;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .sejarah-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* Mengatur ulang lebar dan tinggi gambar agar responsif */
+  .sejarah-card .placeholder-image {
+    width: 300px;
+    height: 200px;
+
+    background-color: #dcdcdc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  /* Memastikan gambar mengisi penuh kontainer */
+  .sejarah-card .placeholder-image img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .umkm-detail {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .umkm-thumbnail {
+    justify-content: center;
+  }
+
+  .btn-wa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .video-section iframe {
+    height: 250px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .btn-download {
+    margin: 30px 10px 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .umkm-thumbnail img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .video-section iframe {
+    height: 200px;
+  }
+
+  .umkm-thumbnail img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .video-section iframe {
+    height: 200px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .staff-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
